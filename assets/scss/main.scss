@@ -1,0 +1,83 @@
+// Import Bootstrap with custom theme colors
+@use "bootstrap/scss/bootstrap" as * with (
+  $primary: #ff66cc, // Vibrant pink
+  $secondary: #00ccff, // Electric cyan
+  $body-bg: #121212, // Deep dark background
+  $body-color: #f0f0f0 // Light text color
+);
+
+// Import necessary components and utilities
+@use "includes/components/table";
+@use "includes/components/jumbotron";
+@use "includes/components/challenge";
+@use "includes/components/sticky-footer";
+@use "includes/components/graphs";
+
+@use "includes/utils/fonts";
+@use "includes/utils/opacity";
+@use "includes/utils/min-height";
+@use "includes/utils/cursors";
+@use "includes/utils/lolight";
+
+@use "includes/icons/award-icons";
+@use "includes/icons/flag-icons";
+
+// Define custom colors
+$otaku-pink: #ff66cc;    // Vibrant pink
+$cyber-blue: #00ccff;    // Electric cyan
+$dark-background: #121212; // Deep dark background
+$light-text: #f0f0f0;    // Light text color
+
+// Global styles
+body {
+  background-color: $dark-background;
+  color: $light-text;
+  font-family: 'Orbitron', sans-serif; // Futuristic font
+}
+
+// Headings with neon glow
+h1, h2 {
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: $otaku-pink;
+  text-shadow: 0 0 5px $otaku-pink, 0 0 10px $otaku-pink;
+}
+
+// Links with cyber accents
+a {
+  color: $cyber-blue;
+  text-decoration: none !important;
+  &:hover {
+    color: lighten($cyber-blue, 10%);
+    text-shadow: 0 0 5px $cyber-blue;
+  }
+}
+
+// Blockquotes with subtle border
+blockquote {
+  border-left: 4px solid $otaku-pink;
+  padding-left: 15px;
+  font-style: italic;
+}
+
+// Buttons reflecting the theme
+.btn-primary {
+  background-color: $cyber-blue;
+  border-color: $cyber-blue;
+  &:hover {
+    background-color: darken($cyber-blue, 10%);
+    border-color: darken($cyber-blue, 10%);
+  }
+}
+
+// Optional: Anime-inspired background image
+// body {
+//   background: url('path-to-anime-inspired-background.jpg') no-repeat center center fixed;
+//   background-size: cover;
+// }
+
+// Additional custom styles
+.card {
+  background-color: rgba($dark-background, 0.9);
+  border: 1px solid $cyber-blue;
+}
