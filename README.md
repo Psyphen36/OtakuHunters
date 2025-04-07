@@ -1,2 +1,2 @@
-## Theme customization:
+# Theme customization:
 Default folders for the CTFD theme
